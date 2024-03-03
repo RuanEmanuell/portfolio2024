@@ -1,0 +1,79 @@
+.container{
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+main{
+  width: 100%;
+  height: 100%;
+}
+
+.mainPhrase{
+  color: white;
+  text-align: center;
+  margin: 0 0 2.5% 0;
+  height: fit-content;
+  min-height: 5vh;
+}
+
+.myImageBox{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+@keyframes myImageAnimation {
+  0%   {opacity: 0; width: 50%}
+  100% {opacity: 1; width: 25%}
+}
+
+.myImage{
+  margin: 5% 0;
+  border-radius: 50%;
+  border: 3px solid white;
+  width: 25%;
+  height: fit-content;
+  animation-name: myImageAnimation;
+  animation-duration: 1.5s;
+  transition: 0.5s all;
+}
+
+.languagesBox{
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  background-color: rgb(29, 29, 29);
+  margin: 5% 0;
+  border-radius: 20px;
+  height: 20%;
+  width: 100%;
+  padding: 1% 0;
+  transition: 1s all;
+}
+
+.languageIcon{
+  padding: 1%;
+  margin: auto;
+  width: 45%;
+  height: fit-content;
+  transition: 0.5s all;
+  cursor: pointer;
+}
+
+.languageIcon:hover{
+  width: 60%;
+}
+
+@media (max-width: 640px) {
+  .languagesBox{
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .languageIcon{
+    width: 35%;
+    padding: 5%;
+  }
+  .languageIcon:hover{
+    width: 45%;
+    padding: 5%;
+  }
+}

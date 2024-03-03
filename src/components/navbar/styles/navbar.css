@@ -1,0 +1,62 @@
+.navContainer{
+  max-width: 1200px;
+  width: 100%;
+}
+
+.navBar{
+  width: 100%;
+  height: 5vh;
+  min-height: 40px;
+  max-height: 100px;
+  background-color: rgb(29, 29, 29);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul{
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.navBarOptions{
+  color: rgb(214, 214, 214);
+  font-weight: bold;
+}
+
+.navBarOptions li{
+  transition: 0.2s all;
+}
+
+.navBarOptions li:hover{
+  cursor: pointer;
+  color: white;
+}
+
+.hamburguerMenuBox{
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+.hamburguerMenu{
+  margin-right: 5%;
+  display: none;
+}
+
+@media (max-width: 960px) {
+  .navBarOptions{
+      display: none;
+  }
+  .hamburguerMenu{
+      display: flex;
+      width: 30px;
+      height: fit-content;
+      margin-left: 5%;
+  }
+}
