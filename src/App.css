@@ -1,0 +1,130 @@
+body{
+  background-color: #24292e;
+  margin: 0;
+}
+
+.navContainer{
+  max-width: 1200px;
+  width: 100%;
+}
+
+.navBar{
+  width: 100%;
+  height: 5vh;
+  min-height: 40px;
+  max-height: 100px;
+  background-color: rgb(29, 29, 29);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul{
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.navBarOptions{
+  color: rgb(214, 214, 214);
+  font-weight: bold;
+}
+
+.navBarOptions li{
+  transition: 0.2s all;
+}
+
+.navBarOptions li:hover{
+  cursor: pointer;
+  color: white;
+}
+
+.hamburguerMenuBox{
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+.hamburguerMenu{
+  margin-right: 5%;
+  display: none;
+}
+
+.container{
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+main{
+  width: 100%;
+  height: 100%;
+}
+
+.mainPhrase{
+  color: white;
+  text-align: center;
+  margin: 0 0 2.5% 0;
+}
+
+.myImageBox{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+@keyframes myImageAnimation {
+  0%   {opacity: 0; width: 50%}
+  100% {opacity: 1; width: 25%}
+}
+
+.myImage{
+  margin: 5% 0;
+  border-radius: 50%;
+  border: 3px solid white;
+  width: 25%;
+  height: fit-content;
+  animation-name: myImageAnimation;
+  animation-duration: 1.5s;
+}
+
+.languagesBox{
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  background-color: rgb(29, 29, 29);
+  margin: 5% 0;
+  border-radius: 20px;
+  height: 20%;
+  width: 100%;
+  padding: 1% 0;
+  transition: 1s all;
+}
+
+.languageIcon{
+  margin: auto;
+  width: 50%;
+  height: fit-content;
+  transition: 0.5s all;
+  cursor: pointer;
+}
+
+.languageIcon:hover{
+  width: 60%;
+}
+
+
+@media (max-width: 960px) {
+  .navBarOptions{
+      display: none;
+  }
+  .hamburguerMenu{
+      display: flex;
+      width: 30px;
+      height: fit-content;
+      margin-left: 5%;
+  }
+}
