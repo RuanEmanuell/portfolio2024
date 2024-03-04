@@ -1,0 +1,10 @@
+.aboutMe{
+  background-color: rgb(29, 29, 29);
+  margin-top: 10%;
+  height: 60vh;
+  transition: 0.5s all;
+}
+
+.aboutMe .mainPhrase{
+  padding-top: 5%;
+}
