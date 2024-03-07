@@ -8,3 +8,8 @@
 .aboutMe .mainPhrase{
   padding-top: 5%;
 }
+
+.sprite{
+  position: relative;
+  width: 20%;
+}

@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "VT323", monospace;
   background-color: #24292e;
   margin: 0;
 }
@@ -22,4 +24,5 @@ main {
   margin: 0 0 2.5% 0;
   height: fit-content;
   min-height: 7vh;
+  transition: 0.5s all;
 }

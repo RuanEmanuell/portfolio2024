@@ -10,7 +10,7 @@ const App:React.FC = () => {
   useEffect(() => {
     setTimeout(() => {
       setAboutMeOpacity('1');
-    }, 6000);
+    }, 3500);
   }, []);
   return (
     <>
