@@ -1,53 +1,31 @@
 import React, { useEffect, useState } from 'react';
-import Sprite from '../../images/sprite.png';
-import Sprite2 from '../../images/sprite2.png';
-import Sprite3 from '../../images/sprite3.png';
+import gdgPhoto from '../../images/gdguberlandia.png';
 import './styles/aboutme.css';
 
-interface Props {
-  aboutMeOpacity: string;
-}
-
-const AboutMe: React.FC<Props> = ({ aboutMeOpacity }) => {
-  const [mySpritePosition, setSpritePosition] = useState<number>(0);
-  const [currentSprite, setCurrentSprite] = useState<string>(Sprite);
-  let isSpriteStopped : boolean = true;
-
-  function stopRunning() {
-    setCurrentSprite(Sprite);
-    isSpriteStopped = true;
-  }
+const AboutMe: React.FC = () => {
+  const [aboutMeOpacity, setAboutMeOpacity] = useState<string>('0');
 
   useEffect(() => {
-    function handleKeyDown(event: KeyboardEvent) {
-      const pressedKey = event.key;
-      if (pressedKey === 'ArrowRight') {
-        isSpriteStopped = false;
-        setSpritePosition(prev => prev + 5);
-        setCurrentSprite(prev => prev === Sprite2 ? Sprite3 : Sprite2);
-      }
-    }
-
-    function handleKeyUp(event: KeyboardEvent) {
-      stopRunning();
-    }
-
-
-    document.addEventListener('keydown', handleKeyDown);
-
-    document.addEventListener('keyup', handleKeyUp);
-
-    return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-    }
-  }, [])
-
+    setTimeout(() => {
+      setAboutMeOpacity('1');
+    }, 3500);
+  }, []);
   return (
     <div className='aboutMe' style={{ opacity: aboutMeOpacity }}>
       <main className='container'>
-        <h1 className='mainPhrase'>Sobre mim</h1>
-        <div className='aboutMePhrase'></div>
-        <img src={currentSprite} className='sprite' style={{ left: `${mySpritePosition}px` }}></img>
+        <h1 className='mainPhrase aboutMeTitle'>Sobre mim</h1>
+        <h2 className='aboutMeMonologue'>Tenho 20 anos de idade, sendo desenvolvedor há cerca de 2 anos,
+          sou apaixonado por programação e tecnologia em geral. Comecei minha
+          trajetória na área de desenvolvimento com alguns cursos e desde lá
+          não penso em parar mais. No ínicio de 2023 iniciei o curso de Análise
+          e Desenvolvimento de Sistemas no Uberaba Parque tecnológico, onde estou
+          tendo a oportunidade de conhecer muita gente legal e participar de muitos
+          eventos.
+        </h2>
+        <div className='aboutMePhotoBox'>
+          <img src={gdgPhoto} className='aboutMePhoto' alt = 'Eu e a turma do IFTM CAUPT no Google Devfest Triângulo 2023.'></img>
+        </div>
+        <figcaption>Eu e a turma do IFTM CAUPT no Google Devfest Triângulo 2023.</figcaption>
       </main>
     </div>
   );

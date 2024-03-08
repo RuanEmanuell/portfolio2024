@@ -23,6 +23,11 @@ main {
   text-align: center;
   margin: 0 0 2.5% 0;
   height: fit-content;
-  min-height: 7vh;
   transition: 0.5s all;
+}
+
+figcaption{
+  margin-top: 2%;
+  text-align: center;
+  color: rgb(214, 214, 214);
 }

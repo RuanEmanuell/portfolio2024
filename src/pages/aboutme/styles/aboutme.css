@@ -1,15 +1,28 @@
 .aboutMe{
   background-color: rgb(29, 29, 29);
-  margin-top: 10%;
-  height: 60vh;
+  margin-top: clamp(10px, 10%, 75px);
   transition: 0.5s all;
+  padding: clamp(10px, 2.5%, 50px) 0;
 }
 
-.aboutMe .mainPhrase{
-  padding-top: 5%;
+.aboutMeTitle{
+  color: rgb(214, 214, 214);
 }
 
-.sprite{
-  position: relative;
-  width: 20%;
+.aboutMeMonologue{
+  color: white;
+  text-align: center;
+  font-size: clamp(20px, 3vw, 30px); 
+}
+
+.aboutMePhotoBox{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutMePhoto{
+  border: 3px solid white;
+  width: 70%;
 }

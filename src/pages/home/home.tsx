@@ -23,6 +23,19 @@ const Home: React.FC = () => {
     'Desenvolvedor MongoDB',
     'Desenvolvedor Firebase'];
 
+  const colors = [
+    'white',
+    'white',
+    'yellow',
+    '#3178C6',
+    'skyblue',
+    'greenyellow',
+    'lightskyblue',
+    '#22E39E',
+    '#4FAA41',
+    '#FFCA2A'
+  ]
+
   const languages = {
     'Javascript': JavascriptIcon,
     'Typescript': TypescriptIcon,
@@ -46,38 +59,9 @@ const Home: React.FC = () => {
     }, 1000);
 
     setInterval(() => {
-      i < phrases.length - 1 ? i++ : i--;
+      i < phrases.length - 1 ? i++ : i  = 0;
       setPhrase(phrases[i]);
-
-      switch (i) {
-        case 2:
-          setPhraseColor('yellow');
-          break;
-        case 3:
-          setPhraseColor('#3178C6');
-          break;
-        case 4:
-          setPhraseColor('skyblue');
-          break;
-        case 5:
-          setPhraseColor('greenyellow');
-          break;
-        case 6:
-          setPhraseColor('lightskyblue');
-          break;
-        case 7:
-          setPhraseColor('#22E39E');
-          break;
-        case 8:
-          setPhraseColor('#4FAA41');
-          break;
-        case 9:
-          setPhraseColor('#FFCA2A');
-          break;
-        default:
-          setPhraseColor('white');
-          break;
-      }
+      setPhraseColor(colors[i])
     }, 3000);
   }
 
@@ -89,7 +73,7 @@ const Home: React.FC = () => {
     <div className='container'>
       <main>
         <section className='myImageBox'>
-          <img src={MyImage} className='myImage'></img>
+          <img src={MyImage} className='myImage' alt = 'Minha foto'></img>
         </section>
         <h1 className='mainPhrase' 
         style={{ color: phraseOnScreenColor, opacity: languageBoxOpacity }}>{phraseOnScreen}</h1>
