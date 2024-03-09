@@ -1,16 +1,23 @@
-.myImageBox{
+.myImageBox {
   width: 100%;
   display: flex;
   justify-content: center;
 }
 
 @keyframes myImageAnimation {
-  0%   {opacity: 0; width: 50%}
-  100% {opacity: 1; width: 25%}
+  0% {
+    opacity: 0;
+    width: 50%
+  }
+
+  100% {
+    opacity: 1;
+    width: 25%
+  }
 }
 
-.myImage{
-  margin: 5% 0;
+.myImage {
+  margin: 2.5% 0;
   border-radius: 50%;
   border: 3px solid white;
   width: 25%;
@@ -21,7 +28,11 @@
   transition: 0.5s all;
 }
 
-.languagesBox{
+.mainPhrase:first-of-type {
+  margin-bottom: 0;
+}
+
+.languagesBox {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   background-color: rgb(29, 29, 29);
@@ -34,7 +45,7 @@
   transition: 1s all;
 }
 
-.languageIcon{
+.languageIcon {
   padding: 1%;
   margin: auto;
   width: 45%;
@@ -43,19 +54,21 @@
   cursor: pointer;
 }
 
-.languageIcon:hover{
+.languageIcon:hover {
   width: 60%;
 }
 
 @media (max-width: 640px) {
-  .languagesBox{
+  .languagesBox {
     grid-template-columns: repeat(4, 1fr);
   }
-  .languageIcon{
+
+  .languageIcon {
     width: 35%;
     padding: 5%;
   }
-  .languageIcon:hover{
+
+  .languageIcon:hover {
     width: 45%;
     padding: 5%;
   }

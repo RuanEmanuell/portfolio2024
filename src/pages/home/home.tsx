@@ -12,7 +12,6 @@ import './styles/home.css';
 
 const Home: React.FC = () => {
   const phrases = [
-    'Olá! Meu nome é Ruan Emanuell!',
     'Desenvolvedor Fullstack',
     'Desenvolvedor Javascript',
     'Desenvolvedor Typescript',
@@ -24,7 +23,6 @@ const Home: React.FC = () => {
     'Desenvolvedor Firebase'];
 
   const colors = [
-    'white',
     'white',
     'yellow',
     '#3178C6',
@@ -75,6 +73,8 @@ const Home: React.FC = () => {
         <section className='myImageBox'>
           <img src={MyImage} className='myImage' alt = 'Minha foto'></img>
         </section>
+        <h1 className='mainPhrase' 
+        style={{opacity: languageBoxOpacity }}>Olá! Meu nome é Ruan Emanuell!</h1>
         <h1 className='mainPhrase' 
         style={{ color: phraseOnScreenColor, opacity: languageBoxOpacity }}>{phraseOnScreen}</h1>
         <article className='languagesBox' style={{ opacity: languageBoxOpacity }}>
