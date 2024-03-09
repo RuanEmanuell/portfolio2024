@@ -22,3 +22,9 @@
   border: 3px solid white;
   width: 75%;
 }
+
+@media (max-width: 640px) {
+  .aboutMePhoto {
+      width: 90%;
+  }
+}

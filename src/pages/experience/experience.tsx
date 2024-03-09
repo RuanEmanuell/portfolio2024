@@ -37,7 +37,6 @@ const Experience: React.FC<Props>= ({experienceRef}) => {
         <h2 className='secondaryPhrase'>Desde então, tenho me focado no meu projeto da minha Iniciação Científica do IFTM, um aplicativo de avaliação de açougues em parceria com a Vigilância Sanitária, bem como meus projetos independentes.</h2>
         <img src = {ExperienceImg4} className = 'experiencePhoto' alt = 'Imagens do protótipo do app, este que está sendo desenvolvido com Flutter.'></img>
         <figcaption>Imagens do protótipo do app, este que está sendo desenvolvido com Flutter.</figcaption>
-        
       </main>
     </div>
   );

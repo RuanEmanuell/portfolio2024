@@ -9,3 +9,9 @@
     border: 3px solid grey;
     width: 75%;
 }
+
+@media (max-width: 640px) {
+    .experiencePhoto {
+        width: 90%;
+    }
+}
