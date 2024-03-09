@@ -10,6 +10,8 @@ import Ground from '../../images/ground.png';
 import ProjectImg1 from '../../images/project1.png';
 import ProjectImg2 from '../../images/project2.png';
 import ProjectImg3 from '../../images/project3.jpg';
+import ProjectImg4 from '../../images/project4.png';
+import ProjectImg5 from '../../images/project5.png';
 import GithubImg from '../../images/github.svg';
 import './styles/projects.css';
 
@@ -22,7 +24,9 @@ const Projects: React.FC<Props> = ({ projectsRef }) => {
   const projects = [
     ['HardwareMaster', ProjectImg1, 'Site para simplificar o processo de montagem de PCs personalizados. Feito com Node, React e MongoDB'],
     ['WaterReminder', ProjectImg2, 'App para lembrar de beber água, feito com Flutter. Disponível na Google Play'],
-    ['RTChat', ProjectImg3, 'Um chat em tempo real feito com Flutter e Firebase']
+    ['RTChat', ProjectImg3, 'Um chat em tempo real feito com Flutter e Firebase'],
+    ['TodoNode', ProjectImg4, 'Um Todo List web feito com Node, Express e MongoDB'],
+    ['ProgEdu', ProjectImg5, 'Aplicativo para aprender a programar, com ranking online, feito com Flutter e Firebase'],
   ]
 
   const [projectsOpacity, setProjectsOpacity] = useState<string>('0');
@@ -79,10 +83,8 @@ const Projects: React.FC<Props> = ({ projectsRef }) => {
 
   function correctSpritePosition() {
     let spritePos: number = mySpritePosition;
-    if (spritePos > window.innerWidth / 4) {
-      spritePos = -50;
-      setSpritePosition(spritePos);
-    }
+    spritePos = -60;
+    setSpritePosition(spritePos);
   }
 
   useEffect(() => {
@@ -98,7 +100,7 @@ const Projects: React.FC<Props> = ({ projectsRef }) => {
   }, []);
 
   return (
-    <div className='projects' style={{ opacity: projectsOpacity }} ref = {projectsRef}>
+    <div className='projects' style={{ opacity: projectsOpacity }} ref={projectsRef}>
       <main className='container'>
         <h1 className='mainPhrase'>Projetos</h1>
         <div className='projectsDisplay'>
