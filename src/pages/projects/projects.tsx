@@ -13,7 +13,11 @@ import ProjectImg3 from '../../images/project3.jpg';
 import GithubImg from '../../images/github.svg';
 import './styles/projects.css';
 
-const Projects: React.FC = () => {
+interface Props {
+  projectsRef: React.RefObject<HTMLDivElement>;
+}
+
+const Projects: React.FC<Props> = ({ projectsRef }) => {
 
   const projects = [
     ['HardwareMaster', ProjectImg1, 'Site para simplificar o processo de montagem de PCs personalizados. Feito com Node, React e MongoDB'],
@@ -31,7 +35,6 @@ const Projects: React.FC = () => {
 
   function runRight() {
     let spritePos: number = mySpritePosition;
-    let currentProjectIndex: number = currentProject;
     if (canClick) {
       setCanClick(!canClick);
       const runInterval = setInterval(() => {
@@ -40,10 +43,9 @@ const Projects: React.FC = () => {
           setSpriteImage(prev => prev === SpriteRight2 ? SpriteRight3 : SpriteRight2);
         } else {
           clearInterval(runInterval);
-          if (currentProjectIndex < projects.length - 1) {
+          if (currentProject < projects.length - 1) {
             spritePos = -60;
-            currentProjectIndex++;
-            setCurrentProject(currentProjectIndex);
+            setCurrentProject(currentProject + 1);
           }
           setSpriteImage(SpriteRight1);
           setCanClick(true);
@@ -55,7 +57,6 @@ const Projects: React.FC = () => {
 
   function runLeft() {
     let spritePos: number = mySpritePosition;
-    let currentProjectIndex: number = currentProject;
     if (canClick) {
       setCanClick(!canClick);
       const runInterval = setInterval(() => {
@@ -64,10 +65,9 @@ const Projects: React.FC = () => {
           setSpriteImage(prev => prev === SpriteLeft2 ? SpriteLeft3 : SpriteLeft2);
         } else {
           clearInterval(runInterval);
-          if (currentProjectIndex > 0) {
+          if (currentProject > 0) {
             spritePos = projectTvRef.current!.clientWidth / 1.45;
-            currentProjectIndex--;
-            setCurrentProject(currentProjectIndex);
+            setCurrentProject(currentProject - 1);
           }
           setSpriteImage(SpriteLeft1);
           setCanClick(true);
@@ -79,7 +79,7 @@ const Projects: React.FC = () => {
 
   function correctSpritePosition() {
     let spritePos: number = mySpritePosition;
-    if (spritePos > window.innerWidth / 2) {
+    if (spritePos > window.innerWidth / 4) {
       spritePos = -50;
       setSpritePosition(spritePos);
     }
@@ -88,7 +88,7 @@ const Projects: React.FC = () => {
   useEffect(() => {
     setTimeout(() => {
       setProjectsOpacity('1');
-    }, 0);
+    }, 4500);
 
     window.addEventListener('resize', correctSpritePosition);
 
@@ -98,9 +98,9 @@ const Projects: React.FC = () => {
   }, []);
 
   return (
-    <div className='projects' style={{ opacity: projectsOpacity }}>
+    <div className='projects' style={{ opacity: projectsOpacity }} ref = {projectsRef}>
       <main className='container'>
-        <h1 className='mainPhrase projectsTitle'>Projetos</h1>
+        <h1 className='mainPhrase'>Projetos</h1>
         <div className='projectsDisplay'>
           <section className='projectsTVBox'>
             <div className='projectsTV' ref={projectTvRef}>
@@ -134,10 +134,10 @@ const Projects: React.FC = () => {
           </section>
         </div>
         <article>
-          <h2 className='seeMoreProjects'>Estes são alguns dos meus projetos, você pode ver mais no meu Github:</h2>
-          <a href = 'https://github.com/RuanEmanuell' className='githubButton'>
+          <h2 className='secondaryPhrase'>Estes são alguns dos meus projetos, você pode ver mais no meu Github:</h2>
+          <a href='https://github.com/RuanEmanuell' className='githubButton'>
             <h1 className='mainPhrase githubPhrase'>Github</h1>
-            <img src = {GithubImg} className='githubImage'></img>
+            <img src={GithubImg} className='githubImage'></img>
           </a>
         </article>
       </main>

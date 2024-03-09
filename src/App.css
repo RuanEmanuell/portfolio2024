@@ -18,17 +18,29 @@ main {
   height: 100%;
 }
 
-.mainPhrase{
-  font-size: clamp(20px, 5vw, 40px); 
-  color: white;
+.mainPhrase {
+  font-size: clamp(20px, 5vw, 40px);
+  color: rgb(214, 214, 214);
   text-align: center;
   margin: 0 0 2.5% 0;
   height: fit-content;
   transition: 0.5s all;
 }
 
-figcaption{
+.secondaryPhrase{
+  color: white;
+  text-align: center;
+  font-size: clamp(20px, 3vw, 30px); 
+}
+
+
+figcaption {
   margin-top: 2%;
   text-align: center;
   color: rgb(214, 214, 214);
+}
+
+figcaption a{
+  text-decoration: none;
+  color: white;
 }

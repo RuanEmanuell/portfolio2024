@@ -1,21 +1,22 @@
-.navContainer{
+.navContainer {
   max-width: 1200px;
   width: 100%;
 }
 
-.navBar{
+.navBar {
   width: 100%;
   height: 5vh;
   min-height: 40px;
   max-height: 100px;
-  background-color: rgb(29, 29, 29);
+  background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: fixed;
+  z-index: 99;
 }
 
-
-.navBarOptions{
+.navBarOptions {
   margin: 0;
   max-width: 1200px;
   display: flex;
@@ -23,7 +24,7 @@
   width: 100%;
 }
 
-ul{
+ul {
   color: rgb(214, 214, 214);
   font-weight: bold;
   list-style: none;
@@ -31,39 +32,39 @@ ul{
   margin: 0;
 }
 
-.navBarOptions li{
+.navBarOptions li {
   transition: 0.2s all;
 }
 
-li:hover{
+li:hover {
   cursor: pointer;
   color: white;
 }
 
-.hamburguerMenuBox{
+.hamburguerMenuBox {
   width: 100%;
   display: flex;
   justify-content: end;
 }
 
-.hamburguerMenu{
+.hamburguerMenu {
   margin-right: 5%;
   display: none;
 }
 
-.lateralMobileMenu{
+.lateralMobileMenu {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.253);
   border: none;
 }
 
-.lateralMobileMenu[open]{
+.lateralMobileMenu[open] {
   display: flex;
   justify-content: end;
 }
 
-.lateralMobileMenu ul{
+.lateralMobileMenu ul {
   padding: 0;
   position: relative;
   background-color: rgb(29, 29, 29);
@@ -71,20 +72,21 @@ li:hover{
   bottom: clamp(15px, 1.5vh, 50px);
 }
 
-.lateralMobileMenu li{
+.lateralMobileMenu li {
   text-align: center;
   padding: 5%;
   border: 1px solid rgba(138, 138, 138, 0.13);
 }
 
 @media (max-width: 960px) {
-  .navBarOptions{
-      display: none;
+  .navBarOptions {
+    display: none;
   }
-  .hamburguerMenu{
-      display: flex;
-      width: 30px;
-      height: fit-content;
-      margin-left: 5%;
+
+  .hamburguerMenu {
+    display: flex;
+    width: 30px;
+    height: fit-content;
+    margin-left: 5%;
   }
 }

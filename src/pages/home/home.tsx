@@ -10,7 +10,11 @@ import MongoDBIcon from '../../images/mongodb.png';
 import FirebaseIcon from '../../images/firebase.png';
 import './styles/home.css';
 
-const Home: React.FC = () => {
+interface Props{
+  homeRef: React.RefObject<HTMLDivElement>;
+}
+
+const Home: React.FC<Props> = ({homeRef}) => {
   const phrases = [
     'Desenvolvedor Fullstack',
     'Desenvolvedor Javascript',
@@ -68,7 +72,7 @@ const Home: React.FC = () => {
   }, []);
 
   return (
-    <div className='container'>
+    <div className='container' ref = {homeRef}>
       <main>
         <section className='myImageBox'>
           <img src={MyImage} className='myImage' alt = 'Minha foto'></img>

@@ -1,0 +1,11 @@
+.experience{
+    background-color: rgb(29, 29, 29);
+    transition: 0.5s all;
+    padding: clamp(10px, 2.5%, 50px);
+    text-align: center;
+}
+
+.experiencePhoto{
+    border: 3px solid grey;
+    width: 75%;
+}

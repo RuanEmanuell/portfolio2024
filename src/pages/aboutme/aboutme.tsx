@@ -2,7 +2,11 @@ import React, { useEffect, useState } from 'react';
 import gdgPhoto from '../../images/gdguberlandia.png';
 import './styles/aboutme.css';
 
-const AboutMe: React.FC = () => {
+interface Props{
+  aboutMeRef: React.RefObject<HTMLDivElement>;
+}
+
+const AboutMe: React.FC<Props>= ({aboutMeRef}) => {
   const [aboutMeOpacity, setAboutMeOpacity] = useState<string>('0');
 
   useEffect(() => {
@@ -11,10 +15,10 @@ const AboutMe: React.FC = () => {
     }, 3500);
   }, []);
   return (
-    <div className='aboutMe' style={{ opacity: aboutMeOpacity }}>
+    <div className='aboutMe' style={{ opacity: aboutMeOpacity }} ref = {aboutMeRef}>
       <main className='container'>
-        <h1 className='mainPhrase aboutMeTitle'>Sobre mim</h1>
-        <h2 className='aboutMeMonologue'>Tenho 20 anos de idade, sendo desenvolvedor há cerca de 2 anos,
+        <h1 className='mainPhrase'>Sobre mim</h1>
+        <h2 className='secondaryPhrase'>Tenho 20 anos de idade, sendo desenvolvedor há cerca de 2 anos,
           sou apaixonado por programação e tecnologia em geral. Comecei minha
           trajetória na área de desenvolvimento com alguns cursos e desde lá
           não penso em parar mais. No ínicio de 2023 iniciei o curso de Análise
