@@ -15,7 +15,7 @@ const Experience: React.FC<Props>= ({experienceRef}) => {
   useEffect(() => {
     setTimeout(() => {
       setExperienceOpacity('1');
-    }, 5500);
+    }, 4000);
   }, []);
   return (
     <div className='experience' style={{ opacity: experienceOpacity }} ref = {experienceRef}>

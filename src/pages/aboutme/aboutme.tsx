@@ -12,7 +12,7 @@ const AboutMe: React.FC<Props>= ({aboutMeRef}) => {
   useEffect(() => {
     setTimeout(() => {
       setAboutMeOpacity('1');
-    }, 3500);
+    }, 2000);
   }, []);
   return (
     <div className='aboutMe' style={{ opacity: aboutMeOpacity }} ref = {aboutMeRef}>

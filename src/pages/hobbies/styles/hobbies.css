@@ -6,33 +6,29 @@
 
 .hobbiesBox{
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
 }
 
-.hobbie{
+.hobby{
     margin: auto 10%;
     padding-bottom: 5%;
 }
 
 .hobbiesPhoto{
-    padding: 0;
-    margin: 0;
-    width: 25%;
+    width: 50%;
     transition: 0.5s all;
 }
 
 .hobbiesPhoto:hover{
-    width: 30%;
+    width: 60%;
 }
 
 @media (max-width: 960px) {
-    .hobbie{
+    .hobbiesBox{
+        display: grid;
+        grid-template-columns: 1fr;
+    }    
+    .hobby{
         padding-bottom: 10%;
-    }
-    .hobbiesPhoto{
-        width: 50%;
-    }
-    .hobbiesPhoto:hover{
-        width: 60%;
     }
 }

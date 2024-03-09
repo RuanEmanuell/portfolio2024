@@ -23,7 +23,6 @@ const NavBar: React.FC<Props> = ({ homeRef, aboutMeRef, projectsRef, experienceR
 
   function scrollToComponent(componentRef: React.RefObject<HTMLDivElement>) {
     componentRef.current?.scrollIntoView({ behavior: 'smooth' });
-    closeModal();
   }
 
 
@@ -40,7 +39,7 @@ const NavBar: React.FC<Props> = ({ homeRef, aboutMeRef, projectsRef, experienceR
         <div className='hamburguerMenuBox' onClick={openModal}>
           <img src={MenuIcon} className='hamburguerMenu'></img>
         </div>
-        <dialog ref={dialogRef} className='lateralMobileMenu'>
+        <dialog ref={dialogRef} className='lateralMobileMenu' onClick = {closeModal}>
           <ul>
             <li onClick={() => scrollToComponent(homeRef)}>Home</li>
             <li onClick={() => scrollToComponent(aboutMeRef)}>Sobre mim</li>

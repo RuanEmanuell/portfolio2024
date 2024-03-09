@@ -88,7 +88,7 @@ const Projects: React.FC<Props> = ({ projectsRef }) => {
   useEffect(() => {
     setTimeout(() => {
       setProjectsOpacity('1');
-    }, 4500);
+    }, 3000);
 
     window.addEventListener('resize', correctSpritePosition);
 
