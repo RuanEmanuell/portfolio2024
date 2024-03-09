@@ -29,34 +29,39 @@ const Projects: React.FC = () => {
   let spritePos = -60;
   let currentProjectIndex = 0;
 
-  function setMySpritePosition(event: any) {
-    switch (event.key) {
-      case 'ArrowRight':
-        console.log(currentProject)
-        if (spritePos <= projectTvRef.current!.clientWidth / 1.3) {
-          spritePos += 10;
-          setSpritePosition(spritePos);
-          setSpriteImage(prev => prev === SpriteRight2 ? SpriteRight3 : SpriteRight2);
-        } else if (currentProjectIndex < projects.length - 1) {
-          spritePos = -60;
-          currentProjectIndex++;
-          setCurrentProject(currentProjectIndex);
-        } else {
-
-        }
-        break;
-      case 'ArrowLeft':
-        if (spritePos >= -60) {
-          spritePos -= 10;
-          setSpritePosition(spritePos);
-          setSpriteImage(prev => prev === SpriteLeft2 ? SpriteLeft3 : SpriteLeft2);
-        } else if (currentProjectIndex > 0) {
-          spritePos = projectTvRef.current!.clientWidth / 1.3;
-          currentProjectIndex--;
-          setCurrentProject(currentProjectIndex);
-        }
-        break;
+  function runRight() {
+    if (spritePos <= projectTvRef.current!.clientWidth / 1.3) {
+      spritePos += 10;
+      setSpritePosition(spritePos);
+      setSpriteImage(prev => prev === SpriteRight2 ? SpriteRight3 : SpriteRight2);
+    } else if (currentProjectIndex < projects.length - 1) {
+      spritePos = -60;
+      currentProjectIndex++;
+      setCurrentProject(currentProjectIndex);
     }
+  }
+
+  function runLeft() {
+    if (spritePos >= -60) {
+      spritePos -= 10;
+      setSpritePosition(spritePos);
+      setSpriteImage(prev => prev === SpriteLeft2 ? SpriteLeft3 : SpriteLeft2);
+    } else if (currentProjectIndex > 0) {
+      spritePos = projectTvRef.current!.clientWidth / 1.3;
+      currentProjectIndex--;
+      setCurrentProject(currentProjectIndex);
+    }
+  }
+
+  function setMySpritePosition(event: any) {
+      switch (event.key) {
+        case 'ArrowRight':
+          runRight();
+          break;
+        case 'ArrowLeft':
+          runLeft();
+          break;
+      }
   }
 
   function setSpriteIdleAnimation(event: any) {
@@ -98,18 +103,45 @@ const Projects: React.FC = () => {
     <div className='projects' style={{ opacity: projectsOpacity }}>
       <main className='container'>
         <h1 className='mainPhrase projectsTitle'>Projetos</h1>
-        <section className='projectsBox'>
+        <section className='projectsTVBox'>
           <div className='projectsTV' ref={projectTvRef}>
-            <img src={Cloud} className='cloudSprite'></img>
-            <img src={mySpriteImage} className='mySprite' style={{ left: mySpritePosition }}></img>
+            <img src={Cloud} className='cloudSprite' alt='Srite de uma nuvem se mexendo'></img>
+            <img src={mySpriteImage} className='mySprite' style={{ left: mySpritePosition }} alt='Sprite de um boneco meu'></img>
             <div className='project'>
-              <img src={projects[currentProject][1]} className='projectImg'></img>
+              <img src={projects[currentProject][1]} className='projectImg' alt={`Imagem do meu projeto ${projects[currentProject][0]}`}></img>
               <div className='projectInfo'>
                 <h3>{projects[currentProject][0]}</h3>
                 <h4>{projects[currentProject][2]}</h4>
               </div>
             </div>
-            <img src={Ground} className='groundSprite'></img>
+            <img src={Ground} className='groundSprite' alt='Sprite do chão'></img>
+          </div>
+        </section>
+        <section className='projectsControllerBox'>
+          <div className='projectsController'>
+            <div className='dpad'>
+              <div className='dpadButton'>
+                <h1>↑</h1>
+              </div>
+              <div className='dpadX'>
+                <div className='dpadButton horizontalButton left' onClick = {runLeft}>
+                  <h1>←</h1>
+                </div>
+                <div className='dpadButton horizontalButton'>
+                  <h1>◯</h1>
+                </div>
+                <div className='dpadButton horizontalButton right' onClick = {runRight}>
+                  <h1>→</h1>
+                </div>
+              </div>
+              <div className='dpadButton'>
+                <h1>↓</h1>
+              </div>
+            </div>
+            <div className='buttons'>
+              <div className='button'>🔴</div>
+              <div className='button'>🔵</div>
+            </div>
           </div>
         </section>
       </main>
