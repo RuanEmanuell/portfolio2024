@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import HobbieImg1 from '../../images/hobbies1.png';
-import HobbieImg2 from '../../images/hobbies2.webp';
-import HobbieImg3 from '../../images/hobbies3.webp';
+import HobbieImg2 from '../../images/hobbies2.png';
+import HobbieImg3 from '../../images/hobbies3.png';
 import HobbieImg4 from '../../images/hobbies4.png';
 import './styles/hobbies.css';
 

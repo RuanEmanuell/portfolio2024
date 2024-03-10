@@ -39,45 +39,51 @@ const Projects: React.FC<Props> = ({ projectsRef }) => {
 
   function runRight() {
     let spritePos: number = mySpritePosition;
+    const tvWidth = projectTvRef.current!.clientWidth / 1.45;
+    const initialSpritePos = -60;
+    const spriteStepWidth = tvWidth / 7.5;
     if (canClick) {
       setCanClick(!canClick);
       const runInterval = setInterval(() => {
-        if (spritePos < projectTvRef.current!.clientWidth / 1.45) {
-          spritePos = spritePos + 30;
+        if (spritePos < tvWidth && currentProject < projects.length - 1) {
+          spritePos = spritePos + spriteStepWidth;
           setSpriteImage(prev => prev === SpriteRight2 ? SpriteRight3 : SpriteRight2);
         } else {
           clearInterval(runInterval);
           if (currentProject < projects.length - 1) {
-            spritePos = -60;
+            spritePos = initialSpritePos;
             setCurrentProject(currentProject + 1);
           }
           setSpriteImage(SpriteRight1);
           setCanClick(true);
         }
         setSpritePosition(spritePos);
-      }, 75);
+      }, 200);
     }
   }
 
   function runLeft() {
     let spritePos: number = mySpritePosition;
+    const tvWidth = projectTvRef.current!.clientWidth / 1.45;
+    const initialSpritePos = -60;
+    const spriteStepWidth = tvWidth / 7.5;
     if (canClick) {
       setCanClick(!canClick);
       const runInterval = setInterval(() => {
-        if (spritePos > -60) {
-          spritePos = spritePos - 30;
+        if (spritePos > initialSpritePos) {
+          spritePos = spritePos - spriteStepWidth;
           setSpriteImage(prev => prev === SpriteLeft2 ? SpriteLeft3 : SpriteLeft2);
         } else {
           clearInterval(runInterval);
           if (currentProject > 0) {
-            spritePos = projectTvRef.current!.clientWidth / 1.45;
+            spritePos = tvWidth;
             setCurrentProject(currentProject - 1);
           }
           setSpriteImage(SpriteLeft1);
           setCanClick(true);
         }
         setSpritePosition(spritePos);
-      }, 75);
+      }, 200);
     }
   }
 
