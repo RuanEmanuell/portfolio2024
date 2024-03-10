@@ -20,6 +20,6 @@ It was made with ReactJS and Typescript. My focus was on responsivity, performan
     
 ### Here are some images of the project running: ⚡️
 
-| ![portfolio1](https://github.com/RuanEmanuell/portfolio2024/assets/113607857/1b5fbc97-00cb-47fb-882a-36330f6bd87e) | ![portfolio2](https://github.com/RuanEmanuell/portfolio2024/assets/113607857/dfe75c66-b8f8-41e4-97cb-d156cee71b55) |
+| ![portfolio1](https://github.com/RuanEmanuell/portfolio2024/assets/113607857/1b5fbc97-00cb-47fb-882a-36330f6bd87e) | ![portfolio2](https://github.com/RuanEmanuell/portfolio2024/assets/113607857/6ae3614d-7f6d-4fe2-9228-e6c537b4b633) |
 |:---:|:---:|
 
