@@ -32,7 +32,7 @@ const Hobbies: React.FC<Props> = ({ hobbiesRef }) => {
           <div className='hobby'>
             <h2 className='secondaryPhrase'>Também gosto bastante de jogar, com Rocket League atualmente sendo meu jogo favorito e com mais horas jogadas (e muitos gols contras marcados).</h2>
             <img src={HobbieImg2} className='hobbiesPhoto' alt='Imagem do Octane, carro principal do Rocket League.'></img>
-            <figcaption>Se você quiser jogar qualquer hora, pode acessar <a href='https://steamcommunity.com/id/GodofredoTroll/'> minha Steam aqui.</a></figcaption>
+            <figcaption>Se você quiser jogar qualquer hora, pode acessar minha Steam <a href='https://steamcommunity.com/id/GodofredoTroll/'> aqui.</a></figcaption>
           </div>
 
 

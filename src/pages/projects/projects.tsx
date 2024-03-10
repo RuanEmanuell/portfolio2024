@@ -161,7 +161,7 @@ const Projects: React.FC<Props> = ({ projectsRef }) => {
           <h2 className='secondaryPhrase'>Estes são alguns dos meus projetos, você pode ver mais no meu Github:</h2>
           <a href='https://github.com/RuanEmanuell' className='githubButton'>
             <h1 className='mainPhrase githubPhrase'>Github</h1>
-            <img src={GithubImg} className='githubImage' alt='Github'></img>
+            <img src={GithubImg} className='githubImage' alt='Acessar meu Github'></img>
           </a>
         </article>
       </main>
