@@ -36,72 +36,75 @@ const Projects: React.FC<Props> = ({ projectsRef }) => {
   const [canClick, setCanClick] = useState<boolean>(true);
 
   let projectTvRef = useRef<HTMLDivElement>(null);
+  let animationStartTime: number | null = null;
   let animationFrameId: number | null = null;
-  
-  function runRight() {
+
+  function runSprite(direction: string) {
     let spritePos: number = mySpritePosition;
-    const tvWidth = projectTvRef.current!.clientWidth / 1.5;
+    const tvWidth = projectTvRef.current!.clientWidth / 1.4;
     const initialSpritePos = -60;
-    const spriteStepWidth = tvWidth / 100;
-  
+    const spriteStepWidth = tvWidth / 15;
+
     if (canClick) {
       setCanClick(false);
-  
-      function animate(){
-        if (spritePos < tvWidth && currentProject < projects.length - 1) {
-          spritePos = spritePos + spriteStepWidth;
-          setSpriteImage((prev) => (prev === SpriteRight2 ? SpriteRight3 : SpriteRight2));
-          setSpritePosition(spritePos);
-        } else {
-          if (currentProject < projects.length - 1) {
-            spritePos = initialSpritePos;
-            setCurrentProject((prev) => prev + 1);
-            setSpritePosition(spritePos);
-          }
-          setSpriteImage(SpriteRight1);
-          setCanClick(true);
-          cancelAnimationFrame(animationFrameId!);
-          return;
+      animationStartTime = performance.now();
+      let doStep = 4;
+
+      function animate(timestamp: number) {
+        switch (direction) {
+          case 'left':
+            if (spritePos > initialSpritePos && currentProject > 0) {
+              if (doStep === 4) {
+                spritePos = spritePos - spriteStepWidth;
+                setSpriteImage((prev) => (prev === SpriteLeft2 ? SpriteLeft3 : SpriteLeft2));
+                setSpritePosition(spritePos);
+                doStep = 0
+              } else {
+                doStep++
+              }
+            } else {
+              if (currentProject > 0) {
+                spritePos = tvWidth;
+                setCurrentProject((prev) => prev - 1);
+                setSpritePosition(spritePos);
+              }
+              setSpriteImage(SpriteLeft1);
+              setCanClick(true);
+              cancelAnimationFrame(animationFrameId!);
+              return;
+            }
+            break;
+          case 'right':
+            if (spritePos < tvWidth && currentProject < projects.length - 1) {
+              if (doStep === 4) {
+                spritePos = spritePos + spriteStepWidth;
+                setSpriteImage((prev) => (prev === SpriteRight2 ? SpriteRight3 : SpriteRight2));
+                setSpritePosition(spritePos);
+                doStep = 0;
+              } else {
+                doStep++;
+              }
+            } else {
+              if (currentProject < projects.length - 1) {
+                spritePos = initialSpritePos;
+                setCurrentProject((prev) => prev + 1);
+                setSpritePosition(spritePos);
+              }
+              setSpriteImage(SpriteRight1);
+              setCanClick(true);
+              cancelAnimationFrame(animationFrameId!);
+              return;
+            }
+            break;
         }
+
         animationFrameId = requestAnimationFrame(animate);
       };
-  
-      animate();
+
+      animate(animationStartTime);
     }
   }
-  
-  function runLeft() {
-    let spritePos: number = mySpritePosition;
-    const tvWidth = projectTvRef.current!.clientWidth / 1.5;
-    const initialSpritePos = -60;
-    const spriteStepWidth = tvWidth / 100;
-  
-    if (canClick) {
-      setCanClick(false);
-  
-      function animate(){
-        if (spritePos > initialSpritePos && currentProject > 0) {
-          spritePos = spritePos - spriteStepWidth;
-          setSpriteImage((prev) => (prev === SpriteLeft2 ? SpriteLeft3 : SpriteLeft2));
-          setSpritePosition(spritePos);
-        } else {
-          if (currentProject > 0) {
-            spritePos = tvWidth;
-            setCurrentProject((prev) => prev - 1);
-            setSpritePosition(spritePos);
-          }
-          setSpriteImage(SpriteLeft1);
-          setCanClick(true);
-          cancelAnimationFrame(animationFrameId!);
-          return;
-        }
-        animationFrameId = requestAnimationFrame(animate);
-      };
-  
-      animate();
-    }
-  }
-  
+
 
   function correctSpritePosition() {
     let spritePos: number = mySpritePosition;
@@ -143,10 +146,10 @@ const Projects: React.FC<Props> = ({ projectsRef }) => {
           <section className='projectsControllerBox'>
             <div className='projectsController'>
               <div className='dpad'>
-                <div className='dpadButton' onClick={runLeft}>
+                <div className='dpadButton' onClick={() => runSprite('left')}>
                   <h1>←</h1>
                 </div>
-                <div className='dpadButton' onClick={runRight}>
+                <div className='dpadButton' onClick={() => runSprite('right')}>
                   <h1>→</h1>
                 </div>
               </div>
