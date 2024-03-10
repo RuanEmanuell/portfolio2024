@@ -19,7 +19,7 @@ const AboutMe: React.FC<Props>= ({aboutMeRef}) => {
       <main className='container'>
         <h1 className='mainPhrase'>Sobre mim</h1>
         <h2 className='secondaryPhrase'>Tenho 20 anos de idade, sendo desenvolvedor há cerca de 2 anos,
-          sou apaixonado por programação e tecnologia em geral. Comecei minha
+          e sou apaixonado por programação e tecnologia em geral. Comecei minha
           trajetória na área de desenvolvimento com alguns cursos e desde lá
           não penso em parar mais. No ínicio de 2023 iniciei o curso de Análise
           e Desenvolvimento de Sistemas no Uberaba Parque tecnológico, onde estou

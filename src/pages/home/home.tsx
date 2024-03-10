@@ -82,7 +82,7 @@ const Home: React.FC<Props> = ({homeRef}) => {
         <h1 className='mainPhrase' 
         style={{ color: phraseOnScreenColor, opacity: languageBoxOpacity }}>{phraseOnScreen}</h1>
         <article className='languagesBox' style={{ opacity: languageBoxOpacity }}>
-          {Object.entries(languages).map(([key, language]) => <img src={language} title={key} alt={key} className='languageIcon'></img>)}
+          {Object.entries(languages).map(([key, language]) => <img src={language} title={key} alt={key} key = {key} className='languageIcon'></img>)}
         </article>
       </main>
     </div>

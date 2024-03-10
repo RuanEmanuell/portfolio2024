@@ -50,12 +50,21 @@
 .mySprite {
     position: relative;
     z-index: 3;
-    top: 80%;
+    top: 75%;
     width: clamp(20px, 17.5%, 70px);
+}
+
+.projectIndex{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    left: 5%;
+    bottom: 10%;
 }
 
 .project {
     position: relative;
+    bottom: 10%;
     margin: 0 auto;
     width: 75%;
     height: 75%;
@@ -95,6 +104,7 @@
 
 .groundSprite {
     position: relative;
+    bottom: 10%;
     width: 100%;
 }
 
@@ -184,14 +194,15 @@
 }
 
 @media (max-width: 480px) {
-    .project {
-        top: 1%;
-    }
-    .groundSprite {
-        top: 2.5%;
-    }
+  .project{
+    bottom: 0;
+  }
 
-    .mySprite {
-        top: 82.5%;
-    }
-}
+  .mySprite{
+    top: 82.5%;
+  }
+
+  .groundSprite{
+    bottom: 0;
+  }
+}   
