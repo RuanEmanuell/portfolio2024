@@ -25,25 +25,25 @@ const Hobbies: React.FC<Props> = ({ hobbiesRef }) => {
         <section className='hobbiesBox'>
           <div className='hobby'>
             <h2 className='secondaryPhrase'>Fora da programação, um dos meus hobbies favoritos dentro da área de tecnologia é pesquisar sobre Hardware, com uma paixão especial por placas de vídeo e processadores.</h2>
-            <img src={HobbieImg1} className='hobbiesPhoto' alt='Radeon VII, a placa de vídeo mais bonita já lançada (sem discussão).'></img>
-            <figcaption><a href='https://www.techpowerup.com/gpu-specs/radeon-vii.c3358'>Radeon VII</a>, a placa de vídeo mais bonita já lançada (sem discussão).</figcaption>
+            <img src={HobbieImg1} className='hobbiesPhoto' alt='AMD Radeon VII, a placa de vídeo mais bonita já lançada (sem discussão).'></img>
+            <figcaption><a href='https://www.techpowerup.com/gpu-specs/radeon-vii.c3358'>AMD Radeon VII</a>, a placa de vídeo mais bonita já lançada (sem discussão).</figcaption>
           </div>
 
           <div className='hobby'>
-            <h2 className='secondaryPhrase'>Também gosto bastante de jogar, com Rocket League atualmente sendo meu jogo favorito e com mais horas jogadas registradas (e muitos gols contras marcados).</h2>
+            <h2 className='secondaryPhrase'>Também gosto bastante de jogar, com Rocket League atualmente sendo meu jogo favorito e com mais horas jogadas (e muitos gols contras marcados).</h2>
             <img src={HobbieImg2} className='hobbiesPhoto' alt='Imagem do Octane, carro principal do Rocket League.'></img>
-            <figcaption>Se você quiser jogar qualquer hora, pode acessar minha Steam <a href='https://steamcommunity.com/id/GodofredoTroll/'>aqui.</a></figcaption>
+            <figcaption>Se você quiser jogar qualquer hora, pode acessar <a href='https://steamcommunity.com/id/GodofredoTroll/'> minha Steam aqui.</a></figcaption>
           </div>
 
 
           <div className='hobby'>
-            <h2 className='secondaryPhrase'>Desde criança eu sempre gostei de ver animes também, com Dragon Ball e One Piece sendo meus favoritos, mas tenho descobrido alguns outros bons recentemente também.</h2>
-            <img src={HobbieImg3} className='hobbiesPhoto' alt='Imagem do Ippo de Hajime no Ippo, o melhor anime de esporte que eu já vi.'></img>
-            <figcaption>Ippo de <a href='https://www.netflix.com/br/title/80995578'>Hajime No Ippo </a>, o melhor anime de esporte que eu já vi.</figcaption>
+            <h2 className='secondaryPhrase'>Desde criança eu também sempre gostei de ver TV, desde séries e filmes até animes.</h2>
+            <img src={HobbieImg3} className='hobbiesPhoto' alt='Imagem do Ippo do anime Hajime no Ippo, uns dos melhores que eu já vi.'></img>
+            <figcaption>Ippo do anime <a href='https://www.netflix.com/br/title/80995578'>Hajime No Ippo</a>, uns dos melhores que eu já vi.</figcaption>
           </div>
 
           <div className='hobby'>
-            <h2 className='secondaryPhrase'>Eu também adoro ir para a academia, tendo treinado 5 vezes por semana há mais ou menos 2 anos, e não penso em parar nem tão cedo, e recomendo muito se você ainda não frequenta.</h2>
+            <h2 className='secondaryPhrase'>Eu também adoro ir para a academia, tendo treinado 5 vezes por semana há mais ou menos 2 anos, e não penso em parar nem tão cedo.</h2>
             <img src={HobbieImg4} className='hobbiesPhoto' alt='Imagem de um haltere de academia.'></img>
             <figcaption>E não, eu não pulo o treino de pernas.</figcaption>
           </div>

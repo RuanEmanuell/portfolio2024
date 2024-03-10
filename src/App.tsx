@@ -6,6 +6,7 @@ import AboutMe from './pages/aboutme/aboutme.tsx';
 import Projects from './pages/projects/projects.tsx';
 import Experience from './pages/experience/experience.tsx';
 import Hobbies from './pages/hobbies/hobbies.tsx';
+import Footer from './components/footer/footer.tsx';
 
 const App: React.FC = () => {
   const HomeRef = useRef<HTMLDivElement>(null);
@@ -22,6 +23,7 @@ const App: React.FC = () => {
       <Projects projectsRef={ProjectsRef} />
       <Experience experienceRef={ExperienceRef} />
       <Hobbies hobbiesRef={HobbiesRef} />
+      <Footer/>
     </>
   );
 }

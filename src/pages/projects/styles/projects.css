@@ -28,7 +28,7 @@
     left: 2px;
     width: clamp(10px, 60%, 50px);
     animation-name: cloudAnimation;
-    animation-duration: 120s;
+    animation-duration: 45s;
     animation-iteration-count: infinite;
 }
 

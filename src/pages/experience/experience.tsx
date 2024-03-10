@@ -22,7 +22,7 @@ const Experience: React.FC<Props>= ({experienceRef}) => {
       <main className='container'>
         <h1 className='mainPhrase'>Experiência profissional</h1>
 
-        <h2 className='secondaryPhrase'>Minha primeira experiência com programação foi com programação de PLCs em linguagem Ladder durante meu tempo como jovem aprendiz na Bunge Bio Energia, em 2021.</h2>
+        <h2 className='secondaryPhrase'>Minha primeira experiência com lógica de programação foi com programação de PLCs em linguagem Ladder durante meu tempo como jovem aprendiz na Bunge Bio Energia, em 2021.</h2>
         <img src = {ExperienceImg1} className = 'experiencePhoto' alt = 'Exemplo de lógica em Ladder.'></img>
         <figcaption>Exemplo de lógica em Ladder.</figcaption>
 

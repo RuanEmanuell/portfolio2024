@@ -1,0 +1,38 @@
+footer{
+  width: 100%;
+  height: fit-content;
+  min-height: 40px;
+  max-height: 100px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footerContainer {
+  max-width: 1200px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.footerPhrase{
+  font-size: large;
+  color: white;
+  text-align: start;
+  margin: auto 2.5%;
+}
+
+.footerButtons{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin: 0 2.5%;
+}
+
+.footerButton{
+  border: 1px solid white;
+  width: 25px;
+}
+
+
