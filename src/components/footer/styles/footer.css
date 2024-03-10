@@ -31,8 +31,9 @@ footer{
 }
 
 .footerButton{
+  margin-top: 5%;
   border: 1px solid white;
-  width: 25px;
+  width: 30px;
 }
 
 

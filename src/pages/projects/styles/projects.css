@@ -196,7 +196,7 @@
 
 @media (max-width: 480px) {
   .project{
-    bottom: 0;
+    bottom: 3%;
   }
 
   .mySprite{
@@ -204,6 +204,6 @@
   }
 
   .groundSprite{
-    bottom: 0;
+    bottom: 2%;
   }
 }   

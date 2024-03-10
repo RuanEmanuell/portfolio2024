@@ -37,7 +37,7 @@ const NavBar: React.FC<Props> = ({ homeRef, aboutMeRef, projectsRef, experienceR
           <li onClick={() => scrollToComponent(hobbiesRef)}>Hobbies</li>
         </ul>
         <div className='hamburguerMenuBox' onClick={openModal}>
-          <img src={MenuIcon} className='hamburguerMenu'></img>
+          <img src={MenuIcon} className='hamburguerMenu' alt = 'Abrir menu lateral'></img>
         </div>
         <dialog ref={dialogRef} className='lateralMobileMenu' onClick = {closeModal}>
           <ul>
