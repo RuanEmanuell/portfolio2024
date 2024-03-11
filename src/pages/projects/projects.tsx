@@ -105,29 +105,9 @@ const Projects: React.FC<Props> = ({ projectsRef }) => {
   function correctSpritePosition() {
     let spritePos: number = -60;
     setSpritePosition(spritePos);
-    correctToSafari();
-  }
-
-  function correctToSafari(){
-    if (navigator.userAgent.includes('Safari') && !navigator.userAgent.includes('Chrome')) {
-      const mySpriteElement = document.querySelector('.mySprite') as HTMLElement | null;
-      const groundSpriteElement = document.querySelector('.groundSprite') as HTMLElement | null;
-      const tvHeight = projectTvRef.current!.clientHeight / 1.3;
-      if (mySpriteElement && groundSpriteElement) {
-        mySpriteElement.style.top = `${tvHeight}px`;
-        groundSpriteElement.style.bottom = `${tvHeight/9}px`;
-        if(window.innerWidth < 480){
-          mySpriteElement.style.top = `${tvHeight*1.075}px`;
-          groundSpriteElement.style.bottom = `${tvHeight/30}px`;
-        }
-      }
-
-    }
   }
 
   useEffect(() => {
-    correctToSafari();
-
     setTimeout(() => {
       setProjectsOpacity('1');
     }, 3000);

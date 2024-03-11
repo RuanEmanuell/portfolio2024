@@ -50,7 +50,7 @@
 .mySprite {
     position: relative;
     z-index: 3;
-    top: 75%;
+    top: 17.5em;
     width: clamp(20px, 17.5%, 70px);
 }
 
@@ -104,7 +104,7 @@
 
 .groundSprite {
     position: relative;
-    bottom: 10%;
+    bottom: 2em;
     width: 100%;
 }
 
@@ -196,15 +196,15 @@
 
 @media (max-width: 480px) {
     .project {
-        bottom: 3%;
+        bottom: 1.4em;
     }
 
     .mySprite {
-        top: 82.5%;
+        top: 18.5em;
     }
 
     .groundSprite {
-        bottom: 2%;
+        bottom: 1em;
     }
 }
 
