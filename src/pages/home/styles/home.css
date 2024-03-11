@@ -23,7 +23,7 @@
   border: 3px solid white;
   width: 25%;
   min-width: 100px;
-  height: fit-content;
+  height: auto;
   animation-name: myImageAnimation;
   animation-duration: 1.5s;
   transition: 0.5s all;
@@ -50,7 +50,7 @@
   padding: 1%;
   margin: auto;
   width: 45%;
-  height: fit-content;
+  height: auto;
   transition: 0.5s all;
   cursor: pointer;
 }

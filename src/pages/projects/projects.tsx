@@ -102,13 +102,32 @@ const Projects: React.FC<Props> = ({ projectsRef }) => {
     }
   }
 
-
   function correctSpritePosition() {
     let spritePos: number = -60;
     setSpritePosition(spritePos);
+    correctToSafari();
+  }
+
+  function correctToSafari(){
+    if (navigator.userAgent.includes('Safari') && !navigator.userAgent.includes('Chrome')) {
+      const mySpriteElement = document.querySelector('.mySprite') as HTMLElement | null;
+      const groundSpriteElement = document.querySelector('.groundSprite') as HTMLElement | null;
+      const tvHeight = projectTvRef.current!.clientHeight / 1.3;
+      if (mySpriteElement && groundSpriteElement) {
+        mySpriteElement.style.top = `${tvHeight}px`;
+        groundSpriteElement.style.bottom = `${tvHeight/9}px`;
+        if(window.innerWidth < 480){
+          mySpriteElement.style.top = `${tvHeight*1.075}px`;
+          groundSpriteElement.style.bottom = `${tvHeight/30}px`;
+        }
+      }
+
+    }
   }
 
   useEffect(() => {
+    correctToSafari();
+
     setTimeout(() => {
       setProjectsOpacity('1');
     }, 3000);
@@ -129,7 +148,7 @@ const Projects: React.FC<Props> = ({ projectsRef }) => {
             <div className='projectsTV' ref={projectTvRef}>
               <img src={Cloud} className='cloudSprite' alt='Srite de uma nuvem se mexendo'></img>
               <img src={mySpriteImage} className='mySprite' style={{ left: mySpritePosition }} alt='Sprite de um boneco meu'></img>
-              <h3 className='projectIndex'>{currentProject+1} / {projects.length}</h3>
+              <h3 className='projectIndex'>{currentProject + 1} / {projects.length}</h3>
               <div className='project'>
                 <img src={projects[currentProject][1]} className='projectImg' alt={`Imagem do meu projeto ${projects[currentProject][0]}`}></img>
                 <div className='projectInfo'>

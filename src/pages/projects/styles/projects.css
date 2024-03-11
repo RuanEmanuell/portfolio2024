@@ -54,7 +54,7 @@
     width: clamp(20px, 17.5%, 70px);
 }
 
-.projectIndex{
+.projectIndex {
     position: relative;
     margin: 0;
     padding: 0;
@@ -195,15 +195,21 @@
 }
 
 @media (max-width: 480px) {
-  .project{
-    bottom: 3%;
-  }
+    .project {
+        bottom: 3%;
+    }
 
-  .mySprite{
-    top: 82.5%;
-  }
+    .mySprite {
+        top: 82.5%;
+    }
 
-  .groundSprite{
-    bottom: 2%;
-  }
-}   
+    .groundSprite {
+        bottom: 2%;
+    }
+}
+
+@media (max-width: 420px) {
+    .projectsTV {
+        font-size: small;
+    }
+}

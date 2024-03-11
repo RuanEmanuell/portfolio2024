@@ -49,6 +49,7 @@ li:hover {
 
 .hamburguerMenu {
   margin-right: 5%;
+  height: auto;
   display: none;
 }
 
@@ -86,7 +87,7 @@ li:hover {
   .hamburguerMenu {
     display: flex;
     width: 30px;
-    height: fit-content;
+    height: auto;
     margin-left: 5%;
   }
 }
