@@ -114,7 +114,7 @@
     height: clamp(200px, 14em, 400px);
     background-color: black;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
 }
 
 .dpad {
@@ -147,10 +147,14 @@
 .buttons {
     margin: 0 5%;
     width: 100%;
-    font-size: 300%;
+    font-size: 400%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+}
+
+.button:hover{
+    cursor: pointer;
 }
 
 .githubButton {
