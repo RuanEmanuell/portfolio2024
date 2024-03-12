@@ -46,7 +46,7 @@ const Projects: React.FC<Props> = ({ projectsRef }) => {
     const spriteStepWidth: number = tvWidth / 15;
     const animationInterval: number = 5;
 
-    if (canClick) {
+    if (canClick && !isScreenOff) {
       setCanClick(false);
       let animationTime: number = 0;
 
@@ -108,7 +108,7 @@ const Projects: React.FC<Props> = ({ projectsRef }) => {
     setSpritePosition(spritePos);
   }
 
-  function turnScreenOnOFf(){
+  function turnScreenOnOff(){
     setScreenOff(!isScreenOff);
   }
 
@@ -159,7 +159,7 @@ const Projects: React.FC<Props> = ({ projectsRef }) => {
                 </div>
               </div>
               <div className='buttons'>
-                <div className='button' onClick={turnScreenOnOFf}>🔴</div>
+                <div className='button' onClick={turnScreenOnOff}>🔴</div>
               </div>
             </div>
           </section>
