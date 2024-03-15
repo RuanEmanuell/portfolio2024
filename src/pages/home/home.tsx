@@ -10,11 +10,11 @@ import MongoDBIcon from '../../images/mongodb.png';
 import FirebaseIcon from '../../images/firebase.png';
 import './styles/home.css';
 
-interface Props{
+interface Props {
   homeRef: React.RefObject<HTMLDivElement>;
 }
 
-const Home: React.FC<Props> = ({homeRef}) => {
+const Home: React.FC<Props> = ({ homeRef }) => {
   const phrases = [
     'Desenvolvedor Fullstack',
     'Desenvolvedor Javascript',
@@ -61,7 +61,7 @@ const Home: React.FC<Props> = ({homeRef}) => {
     }, 1000);
 
     setInterval(() => {
-      i < phrases.length - 1 ? i++ : i  = 0;
+      i < phrases.length - 1 ? i++ : i = 0;
       setPhrase(phrases[i]);
       setPhraseColor(colors[i])
     }, 3000);
@@ -72,17 +72,17 @@ const Home: React.FC<Props> = ({homeRef}) => {
   }, []);
 
   return (
-    <div className='container' ref = {homeRef}>
+    <div className='container' ref={homeRef}>
       <main>
         <section className='myImageBox'>
-          <img src={MyImage} className='myImage' alt = 'Minha foto'></img>
+          <img src={MyImage} className='myImage' alt='Minha foto'></img>
         </section>
-        <h1 className='mainPhrase' 
-        style={{opacity: languageBoxOpacity }}>Olá! Meu nome é Ruan Emanuell!</h1>
-        <h1 className='mainPhrase' 
-        style={{ color: phraseOnScreenColor, opacity: languageBoxOpacity }}>{phraseOnScreen}</h1>
+        <h1 className='mainPhrase'
+          style={{ opacity: languageBoxOpacity }}>Olá! Meu nome é Ruan Emanuell!</h1>
+        <h1 className='mainPhrase'
+          style={{ color: phraseOnScreenColor, opacity: languageBoxOpacity }}>{phraseOnScreen}</h1>
         <article className='languagesBox' style={{ opacity: languageBoxOpacity }}>
-          {Object.entries(languages).map(([key, language]) => <img src={language} title={key} alt={key} key = {key} className='languageIcon'></img>)}
+          {Object.entries(languages).map(([key, language]) => <img src={language} title={key} alt={key} key={key} className='languageIcon'></img>)}
         </article>
       </main>
     </div>

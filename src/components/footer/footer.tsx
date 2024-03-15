@@ -10,8 +10,8 @@ const Footer: React.FC = () => {
       <div className='footerContainer'>
         <h1 className='footerPhrase'>@Ruan Emanuell - 2024</h1>
         <div className='footerButtons'>
-          <a href = 'https://github.com/ruanemanuell'><img src = {GithubIcon} className='footerButton' alt = 'Acessar meu Github'></img></a>
-          <a href = 'https://www.linkedin.com/in/ruan-emanuell-649b97247/'><img src = {LinkedinIcon} className='footerButton' alt = 'Acessar meu Linkedin'></img></a>
+          <a href='https://github.com/ruanemanuell' target="_blank"><img src={GithubIcon} className='footerButton' alt='Acessar meu Github'></img></a>
+          <a href='https://www.linkedin.com/in/ruan-emanuell-649b97247/' target="_blank"><img src={LinkedinIcon} className='footerButton' alt='Acessar meu Linkedin'></img></a>
         </div>
       </div>
     </footer>
