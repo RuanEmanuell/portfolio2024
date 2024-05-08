@@ -9,9 +9,14 @@ import Cloud from '../../images/cloud.png';
 import Ground from '../../images/ground.png';
 import ProjectImg1 from '../../images/project1.png';
 import ProjectImg2 from '../../images/project2.png';
-import ProjectImg3 from '../../images/project3.jpg';
+import ProjectImg3 from '../../images/project3.png';
 import ProjectImg4 from '../../images/project4.png';
-import ProjectImg5 from '../../images/project5.png';
+import ProjectImg5 from '../../images/project5.jpg';
+import ProjectImg6 from '../../images/project6.png';
+import ProjectImg7 from '../../images/project7.png';
+import ProjectImg8 from '../../images/project8.png';
+import ProjectImg9 from '../../images/project9.png';
+import ProjectImg10 from '../../images/project10.png';
 import GithubImg from '../../images/github.svg';
 import './styles/projects.css';
 
@@ -24,9 +29,14 @@ const Projects: React.FC<Props> = ({ projectsRef }) => {
   const projects = [
     ['HardwareMaster', ProjectImg1, 'Site para simplificar o processo de montagem de PCs personalizados. Feito com Node, React e MongoDB'],
     ['WaterReminder', ProjectImg2, 'App para lembrar de beber água, feito com Flutter. Disponível na Google Play'],
-    ['RTChat', ProjectImg3, 'Um chat em tempo real feito com Flutter e Firebase'],
-    ['TodoNode', ProjectImg4, 'Um Todo List web feito com Node, Express e MongoDB'],
-    ['ProgEdu', ProjectImg5, 'Aplicativo para aprender a programar, com ranking online, feito com Flutter e Firebase'],
+    ['VisAçougue', ProjectImg3, 'App informativo e simulador de avaliações de açougues, feito com React Native e Firebase'],
+    ['DevBlog', ProjectImg4, 'Blog pessoal para falar de assuntos que me interessam na área de tecnologia, feito com NextJS'],
+    ['RTChat', ProjectImg5, 'Um chat em tempo real feito com Flutter e Firebase'],
+    ['ProgEdu', ProjectImg6, 'Aplicativo para aprender a programar, com ranking online, feito com Flutter e Firebase'],
+    ['NativeSocial', ProjectImg7, 'Uma mini rede social feita com React Native, Python (Flask) e SQLite'],
+    ['CellMax', ProjectImg8, 'Um comparador e lista de smartphones, feito com Java Spring Boot, React e SQLite'],
+    ['ReadmeGenerator', ProjectImg9, 'Gerador de READMEs para projetos do Github, feito com NextJS'],
+    ['TodoNode', ProjectImg10, 'Um Todo List web feito com Node, Express e MongoDB'],
   ]
 
   const [projectsOpacity, setProjectsOpacity] = useState<string>('0');
