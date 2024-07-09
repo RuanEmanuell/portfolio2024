@@ -24,7 +24,7 @@ const AboutMe: React.FC<Props>= ({aboutMeRef}) => {
           não penso em parar mais. No ínicio de 2023 iniciei o curso de Análise
           e Desenvolvimento de Sistemas no Uberaba Parque tecnológico, onde estou
           tendo a oportunidade de conhecer muita gente legal e participar de muitos
-          eventos.
+          eventos. Atualmente atuo como Desenvolvedor Web Júnior na Codiub (Companhia de Desenvolvimento de Informática de Uberaba).
         </h2>
         <div className='aboutMePhotoBox'>
           <img src={gdgPhoto} className='aboutMePhoto' alt = 'Eu e a turma do IFTM CAUPT no Google Devfest Triângulo 2023.'></img>

@@ -35,7 +35,7 @@
 
 .languagesBox {
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
+  grid-template-columns: repeat(10, 1fr);
   background-color: rgb(29, 29, 29);
   margin: 2% 0;
   border-radius: 5px;
@@ -61,7 +61,7 @@
 
 @media (max-width: 640px) {
   .languagesBox {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
   }
 
   .languageIcon {

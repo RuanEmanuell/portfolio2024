@@ -3,11 +3,13 @@ import MyImage from '../../images/ruan.jpg';
 import JavascriptIcon from '../../images/js.png';
 import TypescriptIcon from '../../images/ts.png';
 import ReactIcon from '../../images/react.png';
+import AngularIcon from '../../images/angular.png';
 import NodeIcon from '../../images/node.png';
-import FlutterIcon from '../../images/flutter.png';
+import JavaIcon from '../../images/java.png';
+import PythonIcon from '../../images/python.png';
 import SQLIcon from '../../images/sql.png';
-import MongoDBIcon from '../../images/mongodb.png';
 import FirebaseIcon from '../../images/firebase.png';
+import MongoDBIcon from '../../images/mongodb.png';
 import './styles/home.css';
 
 interface Props {
@@ -19,34 +21,40 @@ const Home: React.FC<Props> = ({ homeRef }) => {
     'Desenvolvedor Fullstack',
     'Desenvolvedor Javascript',
     'Desenvolvedor Typescript',
-    'Desenvolvedor React',
+    'Desenvolvedor React / React Native',
+    'Desenvolvedor Angular',
     'Desenvolvedor Node',
-    'Desenvolvedor Flutter',
+    'Desenvolvedor Java',
+    'Desenvolvedor Python',
     'Desenvolvedor SQL',
-    'Desenvolvedor MongoDB',
-    'Desenvolvedor Firebase'];
+    'Desenvolvedor Firebase',
+    'Desenvolvedor MongoDB'];
 
   const colors = [
     'white',
     'yellow',
     '#3178C6',
     'skyblue',
+    'red',
     'greenyellow',
-    'lightskyblue',
-    '#22E39E',
+    'orangered',
+    'gold',
     '#4FAA41',
-    '#FFCA2A'
+    '#FFCA2A',
+    '#22E39E'
   ]
 
   const languages = {
     'Javascript': JavascriptIcon,
     'Typescript': TypescriptIcon,
     'React': ReactIcon,
+    'Angular': AngularIcon,
     'Node': NodeIcon,
-    'Flutter': FlutterIcon,
+    'Java': JavaIcon,
+    'Python': PythonIcon,
     'SQL': SQLIcon,
-    'MongoDB': MongoDBIcon,
     'Firebase': FirebaseIcon,
+    'MongoDB': MongoDBIcon
   }
 
   const [phraseOnScreen, setPhrase] = useState<string>(phrases[0]);

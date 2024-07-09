@@ -3,6 +3,7 @@ import ExperienceImg1 from '../../images/experience1.png';
 import ExperienceImg2 from '../../images/experience2.png';
 import ExperienceImg3 from '../../images/experience3.gif';
 import ExperienceImg4 from '../../images/experience4.jpeg';
+import ExperienceImg5 from '../../images/experience5.png';
 import './styles/experience.css';
 
 interface Props {
@@ -34,9 +35,13 @@ const Experience: React.FC<Props> = ({ experienceRef }) => {
         <img src={ExperienceImg3} className='experiencePhoto' alt='Uma parte do sistema que eu desenvolvi, que transforma tabelas do banco de dados em planilhas do Excel automaticamente.'></img>
         <figcaption>Uma parte do sistema que eu desenvolvi, que transforma tabelas do banco de dados em planilhas do Excel automaticamente.</figcaption>
 
-        <h2 className='secondaryPhrase'>Desde então, tenho me focado no meu projeto da minha Iniciação Científica do IFTM, um aplicativo de avaliação de açougues em parceria com a Vigilância Sanitária, bem como meus projetos independentes.</h2>
+        <h2 className='secondaryPhrase'>Na primeira parte de 2024, iniciei meu projeto da minha Iniciação Científica do IFTM, um aplicativo de avaliação de açougues em parceria com a Vigilância Sanitária, assim como também criei alguns projetos independentes.</h2>
         <img src={ExperienceImg4} className='experiencePhoto' alt='Imagens do protótipo do app, este que está sendo desenvolvido com Flutter.'></img>
-        <figcaption>Imagens do protótipo do app, que está sendo desenvolvido com Flutter, Firebase e NodeJS.</figcaption>
+        <figcaption>Imagens do protótipo do app, que está sendo desenvolvido com React Native e Firebase.</figcaption>
+
+        <h2 className='secondaryPhrase'>Como dito antes, atualmente trabalho como Desenvolvedor Web Júnior na Codiub (Companhia de Desenvolvimento de Informática de Uberaba), desenvolvendo sistemas web em linguagens/frameworks como Angular, Spring Boot e Java JSF.</h2>
+        <img src={ExperienceImg5} className='experiencePhoto' alt='Imagem do Portal Acadêmico de Uberaba, um dos sistemas desenvolvidos pela Codiub e que estou tendo envolvimento direto atualmente.'></img>
+        <figcaption>Imagem do <a href="https://app3.codiub.com.br/portal-academico/pages/login.xhtml?uri=/pages/main.xhtml">Portal Acadêmico de Uberaba</a>, que é um dos sistemas desenvolvidos pela Codiub, e que estou tendo bastante envolvimento recentemente.</figcaption>
       </main>
     </div>
   );
